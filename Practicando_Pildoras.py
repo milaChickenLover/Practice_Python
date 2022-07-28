@@ -42,8 +42,10 @@ class Moto(Vehiculo):
         self.enmarcha, "\nAcelerando: ", self.acelera, "\nFrenando: ", self.frena, 
         "\n", self.hcaballito)
 
-class VElectricos():
-    def __init__(self):
+class VElectricos(Vehiculo):
+    def __init__(self, marca, modelo):
+
+        super().__init__(marca, modelo)
         self.autonomia = 100
 
     def cargarEnergia(self):
@@ -64,4 +66,34 @@ class BicicletaElectrica(VElectricos, Vehiculo):
 
 # Cuando hay herencia múltiple siempre se da preferencia al Constructor de la primera clase
 # que se ha colocado en la herencia, en este caso: VElectricos
-miBici = BicicletaElectrica()
+miBici = BicicletaElectrica("Montañera", "MV")
+
+# Herencia Super()
+class Persona():
+
+    def __init__(self, nombre, edad, lugar_residencia):
+        self.nombre=nombre
+        self.edad=edad
+        self.lugar_residencia=lugar_residencia
+    
+    def descripcion(self):
+        print("Nombre: ", self.nombre, ", Edad: ", self.edad, ", Residencia: ", self.lugar_residencia)
+
+
+class Empleado(Persona):
+
+    def __init__(self, salario, antiguedad, nombre_empleado, edad_empleado, residencia_empleado):
+        super().__init__(nombre_empleado, edad_empleado, residencia_empleado)
+        self.salario=salario
+        self.antiguedad=antiguedad
+    
+    def descripcion(self):
+        super().descripcion()
+        print("Salario: ", self.salario, "Antiguedad: ", self.antiguedad)
+
+Manuel = Empleado(1500, 55, "Manuel", 55, "Colombia")
+Manuel.descripcion()
+
+# El objeto Manuel es de la clase Empleado? -> True
+print(isinstance(Manuel, Empleado))
+print(isinstance(Manuel, Persona))
