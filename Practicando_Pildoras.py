@@ -97,3 +97,5 @@ Manuel.descripcion()
 # El objeto Manuel es de la clase Empleado? -> True
 print(isinstance(Manuel, Empleado))
 print(isinstance(Manuel, Persona))
+
+#prueba
