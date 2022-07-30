@@ -116,6 +116,8 @@ print(isinstance(Manuel, Persona))
 
 #print(edad.isdigit())
 
+
+# EJERCICIO VIDEO 33
 email = input("Introduce un correo electrónico: ")
 arroba = email.count("@")
 
