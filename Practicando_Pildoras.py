@@ -96,11 +96,8 @@ Manuel.descripcion()
 
 # El objeto Manuel es de la clase Empleado? -> True
 print(isinstance(Manuel, Empleado))
-<<<<<<< HEAD
 print(isinstance(Manuel, Persona))
-=======
 print(isinstance(Manuel, Persona))
-
 
 # STRINGS
 #nombreUsuario=input("Introduce tu nombre de usuario: ")
@@ -128,4 +125,3 @@ if(arroba!=1 or email.find("@")==0 or email.endswith("@") or email.startswith("@
     print("Correo erróneo")
 else:
     print("Correo válido")
->>>>>>> 566e6157cc814851110273e4f4e3108d6069e4ba
