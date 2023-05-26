@@ -96,4 +96,36 @@ Manuel.descripcion()
 
 # El objeto Manuel es de la clase Empleado? -> True
 print(isinstance(Manuel, Empleado))
+<<<<<<< HEAD
 print(isinstance(Manuel, Persona))
+=======
+print(isinstance(Manuel, Persona))
+
+
+# STRINGS
+#nombreUsuario=input("Introduce tu nombre de usuario: ")
+#print("El nombre es: ", nombreUsuario.capitalize())
+
+#edad=input("Introduce tu edad: ")
+
+#while(edad.isdigit()==False):
+#    print("Por favor, introduce una valor numérico")
+#    edad=input("Introduce la edad: ")
+
+#if(int(edad)<18):
+#    print("No puedes pasar")
+#else:
+#    print("Puedes pasar")
+
+#print(edad.isdigit())
+
+
+# EJERCICIO VIDEO 33
+email = input("Introduce un correo electrónico: ")
+arroba = email.count("@")
+
+if(arroba!=1 or email.find("@")==0 or email.endswith("@") or email.startswith("@")):
+    print("Correo erróneo")
+else:
+    print("Correo válido")
+>>>>>>> 566e6157cc814851110273e4f4e3108d6069e4ba
