@@ -1,12 +1,24 @@
 from pytube import YouTube
 from sys import argv
 
-link = argv[1]
-yt = YouTube(link)
+try:
+    # Ask the user to input the YouTube URL
+    url = argv[1]
+    
+    yt = YouTube(url)
+    
+    print("Title:", yt.title)
+    print("Views:", yt.views)
 
-print("Title: ", yt.title)
-print("Views: ", yt.views)
+    # Get the highest resolution stream
+    yd = yt.streams.get_highest_resolution()
+    
+    # Download the video to the current directory
+    yd.download('E:\Programacion')
+    
+    print("Download complete.")
+except Exception as e:
+    print("An error occurred:", str(e))
 
-yd = yt.streams.get_highest_resolution()
-
-yd.download('/home/milagrossalas15/')
+#Ejemplo para ejecutar en consola:
+#python3 DescargarVideosYT.py "https://www.youtube.com/watch?v=Q7UeWILja-g&t=3s"
